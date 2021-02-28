@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: verdana;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+a {
+  color: rgb(3, 3, 31);
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image img {
+  width: 800px;
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -13,6 +13,9 @@ Artist.init(
     },
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
+    image_Url: {
+      type: DataTypes.STRING,
+    },
   },
   { sequelize, modelName: 'artist' }
 );
@@ -46,10 +49,26 @@ const syncAndSeed = async () => {
     await sequelize.sync({ force: true });
 
     const [jimi, amy, jim, janis] = await Promise.all([
-      Artist.create({ first_name: 'Jimi', last_name: 'Hendrix' }),
-      Artist.create({ first_name: 'Amy', last_name: 'Winehouse' }),
-      Artist.create({ first_name: 'Jim', last_name: 'Morrison' }),
-      Artist.create({ first_name: 'Janis', last_name: 'Joplin' }),
+      Artist.create({
+        first_name: 'Jimi',
+        last_name: 'Hendrix',
+        image_Url: 'jimi.png',
+      }),
+      Artist.create({
+        first_name: 'Amy',
+        last_name: 'Winehouse',
+        image_Url: 'amy.png',
+      }),
+      Artist.create({
+        first_name: 'Jim',
+        last_name: 'Morrison',
+        image_Url: 'jim.png',
+      }),
+      Artist.create({
+        first_name: 'Janis',
+        last_name: 'Joplin',
+        image_Url: 'janis.png',
+      }),
     ]);
 
     const [turkey, hawley, marquee, capitol] = await Promise.all([
